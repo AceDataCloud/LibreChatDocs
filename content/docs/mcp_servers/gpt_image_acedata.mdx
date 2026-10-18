@@ -8,15 +8,15 @@ This independent integration connects **GPT Image** through **Ace Data Cloud**. 
 
 ## Install the native package
 
-The experimental [Agent Plugins](/docs/features/agent_plugins) format loads each operator-installed plugin at startup. Review the [package source](https://github.com/AceDataCloud/LibreChatPlugins/tree/codex/native-services-20261018/plugins/gpt-image) and install only the service you need:
+The experimental [Agent Plugins](/docs/features/agent_plugins) format loads each operator-installed plugin at startup. Review the [package source](https://github.com/AceDataCloud/LibreChatPlugins/tree/v0.1.0/plugins/gpt-image) and install only the service you need:
 
 ```bash
 python3 scripts/install.py gpt-image --plugin-dir /path/to/LibreChat/plugin
 ```
 
-Source [PR #1](https://github.com/AceDataCloud/LibreChatPlugins/pull/1) is pending review; no stable release is claimed. Run this command from the `codex/native-services-20261018` review branch checkout of `AceDataCloud/LibreChatPlugins`. The selected plugin directory must be visible inside the LibreChat filesystem (`/app/plugin` by default); preserve existing Docker mounts. Restart that instance. The package adds the `gpt-image-by-acedatacloud` MCP connection and a service-specific Skill to that instance's tool catalog. It is not an installation into every LibreChat instance or a global marketplace entry.
+[Release v0.1.0](https://github.com/AceDataCloud/LibreChatPlugins/releases/tag/v0.1.0) contains one independently downloadable ZIP per service plus `SHA256SUMS`. Verify the selected file, then extract its single service directory into the administrator-controlled plugin directory; preserve existing plugin/data directories. Each archive includes its own license, English/Chinese illustrated guides and screenshots. Alternatively, run the command above from a `v0.1.0` source checkout of `AceDataCloud/LibreChatPlugins`. The selected plugin directory must be visible inside the LibreChat filesystem (`/app/plugin` by default); preserve existing Docker mounts. Restart that instance. The package adds the `gpt-image-by-acedatacloud` MCP connection and a service-specific Skill to that instance's tool catalog. It is not an installation into every LibreChat instance or a global marketplace entry.
 
-The [English and Chinese illustrated package guides](https://github.com/AceDataCloud/LibreChatPlugins/tree/codex/native-services-20261018) include installation, account setup, current limits and troubleshooting. The package reuses [OpenAIMCP](https://github.com/AceDataCloud/OpenAIMCP); it does not implement its own billing or generation API.
+The [English and Chinese illustrated package guides](https://github.com/AceDataCloud/LibreChatPlugins/tree/v0.1.0) include installation, account setup, current limits and troubleshooting. The package reuses [OpenAIMCP](https://github.com/AceDataCloud/OpenAIMCP); it does not implement its own billing or generation API.
 
 ## Connect your account
 
